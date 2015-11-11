@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Proxy Host Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KKJ-gp-xIs">
+                                <rect key="frame" x="20" y="20" width="373" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Port" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="5mr-lD-i0f">
+                                <rect key="frame" x="401" y="20" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Basic Auth User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9Qh-NK-ri9">
+                                <rect key="frame" x="20" y="58" width="277" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cnB-fd-x9i">
+                                <rect key="frame" x="305" y="58" width="275" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ll-2u-DQd">
+                                <rect key="frame" x="20" y="96" width="560" height="30"/>
+                                <state key="normal" title="Load Something using this Proxy server"/>
+                                <connections>
+                                    <action selector="loadSomething:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hGI-K9-w9I"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77w-aq-aZ1">
+                                <rect key="frame" x="20" y="134" width="560" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cnB-fd-x9i" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Jz-hJ-r2i"/>
+                            <constraint firstItem="77w-aq-aZ1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Ge-UJ-aRJ"/>
+                            <constraint firstItem="KKJ-gp-xIs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="372:600" constant="1" id="5lB-ZZ-bVt"/>
+                            <constraint firstItem="1ll-2u-DQd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="B7X-ym-Y1i"/>
+                            <constraint firstItem="1ll-2u-DQd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DpR-2P-8Jy"/>
+                            <constraint firstItem="77w-aq-aZ1" firstAttribute="top" secondItem="1ll-2u-DQd" secondAttribute="bottom" constant="8" id="ERV-zv-xYh"/>
+                            <constraint firstItem="KKJ-gp-xIs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mib-US-Une"/>
+                            <constraint firstItem="9Qh-NK-ri9" firstAttribute="top" secondItem="KKJ-gp-xIs" secondAttribute="bottom" constant="8" id="PQg-Iv-a1k"/>
+                            <constraint firstItem="cnB-fd-x9i" firstAttribute="top" secondItem="5mr-lD-i0f" secondAttribute="bottom" constant="8" id="R13-6b-t5A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="77w-aq-aZ1" secondAttribute="bottom" id="Tra-cK-DcB"/>
+                            <constraint firstItem="5mr-lD-i0f" firstAttribute="leading" secondItem="KKJ-gp-xIs" secondAttribute="trailing" constant="8" id="cvr-E2-TuZ"/>
+                            <constraint firstItem="9Qh-NK-ri9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dfc-fA-rVh"/>
+                            <constraint firstItem="5mr-lD-i0f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dmH-EQ-uZ2"/>
+                            <constraint firstItem="1ll-2u-DQd" firstAttribute="top" secondItem="cnB-fd-x9i" secondAttribute="bottom" constant="8" id="gJB-ty-xMv"/>
+                            <constraint firstItem="KKJ-gp-xIs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pzP-Vd-3hv"/>
+                            <constraint firstItem="9Qh-NK-ri9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="276:600" constant="1" id="tSe-gc-AOz"/>
+                            <constraint firstItem="5mr-lD-i0f" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="u38-7p-7F3"/>
+                            <constraint firstItem="77w-aq-aZ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vFh-ho-y9l"/>
+                            <constraint firstItem="cnB-fd-x9i" firstAttribute="leading" secondItem="9Qh-NK-ri9" secondAttribute="trailing" constant="8" id="vhA-DJ-EMZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadImageFromProxyButton" destination="1ll-2u-DQd" id="G9l-Co-BJe"/>
+                        <outlet property="loadWebView" destination="77w-aq-aZ1" id="HPf-D7-wRj"/>
+                        <outlet property="proxyAuthPasswordTextField" destination="cnB-fd-x9i" id="p4I-4y-DCv"/>
+                        <outlet property="proxyAuthUserNameTextField" destination="9Qh-NK-ri9" id="5Kp-US-LF6"/>
+                        <outlet property="proxyIpTextField" destination="KKJ-gp-xIs" id="QmQ-tZ-nMm"/>
+                        <outlet property="proxyPortTextField" destination="5mr-lD-i0f" id="5Ga-e1-j30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="470" y="429"/>
+        </scene>
+    </scenes>
+</document>
